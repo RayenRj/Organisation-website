@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --components---green--truth-teal: #e1f0ee;
+    --components---balance-blue: #b9ddff;
+    --components---lifted-lemon-tint: #fdffdd;
+    --components---gratitude-green: #9deab2;
+    --components---present-pink: #ffb8b2;
+    --components---trust-teal: #005c65;
+    --components---balance-blue-tint: #e7f3ff;
+    --components---present-pink-tint: #ffe7e4;
+    --components---white: white;
+    --components---lifted-lemon: #eaf475;
+    --components---brave-black: #2a292d;
+    --components---accessibility-green-dark: #005c65;
+    --components---light-mint: #ebf3f5;
+    --components---dark-blue--150: #becbe0;
+    --components---green--bright-green--800: #47a203;
+    --components---mint-green: #e1f0ee;
+    --components---green--gratitude-green: #9deab2;
+    --components---optimist-orange-tint: #fad9ce;
+    --components---motivation-maroon: #2b0001;
+    --components---balance-blue-2\<deleted\|variable-ee9bf81b-11bb-c4b2-1115-ce04fa7567c4\>: #b9ddff;
+    --components---blob-1\<deleted\|variable-a2a878bd-841d-3cc2-7d01-969285b689f2\>: #689ea1;
+    --components---truth-teal: #e1f0ee;
+    --components---pink: #fad9ce;
+    --components---form-field-border: #68768d;
+    --components---small-border-radius: 4px;
+    --components---form-field-placeholder: #a1acbf;
+    --components---optimist-orange: #f2734a;
+    --accessibility-green-dark: #005c65;
+    --balance-blue: #b9ddff;
+    --mint-green: #e1f0ee;
+    --green--truth-teal: #e1f0ee;
+    --present-pink-tint: #ffe7e4;
+    --white: white;
+    --lemon-lift-tint: #fdffdd;
+    --lifted-lemon: #eaf475;
+    --lifted-lemon-2: #eaf475;
+    --brave-black: #2a292d;
+    --balance-blue-tint: #e7f3ff;
+    --motivation-maroon: #2b0001;
+    --truth-teal: #e1f0ee;
+    --gratitude-green-tint: #d7f9e1;
+    --paragraph: #314d5c;
+    --optimist-orange: #f2734a;
+    --green--gratitude-green: #9deab2;
+    --trust-teal: #005c65;
+    --cta-hover: #004654;
+    --dark-blue--150: #becbe0;
+    --green--bright-green--800: #47a203;
+    --dark-blue--300: #263159;
+    --blue--95: #e1e5f0;
+
+
+    --main-color :#005c65;
+    --second-color :  #47a203;
+
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+/* start of general style  */
+
+.container{
+    background-color: #eee;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.73rem;
+    padding-bottom: 1rem;
+}
+
+@media (max-width:767px){
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* end of general  */
+
+/* start of header  */
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 60px;
+
+}
+.logo{
+    width: 10%;
+    text-align: center;
+}
+.logo img{
+    width: 60%;
+}
+
+.header .list{
+    width: 70%;
+
+}
+.header .list ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    list-style-type: none;
+}
+.header .list ul li a{
+    text-decoration: none;
+    color: var(--main-color);
+    text-align: center;
+    position: relative;
+}
+
+.header button{
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-color);
+    padding: 0.5em 1em;
+    border-radius: 5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header button:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+ul li a.item::after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 5%;
+    width: 90%;
+    height: 1.5px;
+    background-color: var(--main-color);
+}
+
+
+@media (max-width:767px){
+    .header ul li:not(:last-child){
+        display: none;
+    }
+}
+/* end header  */
+
+/* start of main  */
+.main{
+    height: calc(100vh - 104px);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #eee;
+}
+.main > div{
+    width: 50%;
+    height: 100%;
+}
+.main h1{
+    margin: 0;
+}
+
+.main .image img{
+    width: 100%;
+}
+/* end of main  */
