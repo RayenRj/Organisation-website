@@ -52,7 +52,10 @@
     --blue--95: #e1e5f0;
 
 
-    --main-color :#005c65;
+    --main-color :#004654;
+    /* --main-color :black; */
+    --main-hover-color: #314d5c;
+    --second-hover-color : #e1f0ee;
     --second-color :  #47a203;
 
 }
@@ -64,7 +67,7 @@
 /* start of general style  */
 
 .container{
-    background-color: #eee;
+    background-color: white;
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
@@ -172,4 +175,125 @@ ul li a.item::after{
 .main .image img{
     width: 100%;
 }
+
+.main .information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--balance-blue);
+    
+
+}
+
+.main .information h1{
+    text-align: left;
+    font-size: clamp(30px,10vw,3rem);
+    color: var(--main-color);
+}
+.main .information ul li{
+    text-align: left;
+    color: #3f8c93;
+
+}
+
+
+.main ul{
+    list-style: none;
+}
+.button{
+    margin-top: 4rem;
+}
+
+.main .information .button a{
+    text-decoration: none;
+    margin: 0rem 0.5em;
+    font-size : clamp(1.1rem,5vw,1.5rem);
+    margin-top: 70px;
+    border: 2px solid var(--main-color);
+    padding : 0.7rem 2.5rem;
+    border-radius: 2rem;
+    color: var(--main-color);
+}
+
+.main .information .button a:first-child{
+    background-color: var(--main-color);
+    color: white;
+
+}
+
+
+
 /* end of main  */
+
+/* start of about  */
+.about {
+    width: 70%;
+    margin: auto;
+}
+.about .container{
+    padding-top: 7rem;
+    min-height: 100vh;
+}
+.about .container > div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+
+}
+
+.about .container > div .text h1{
+    color: var(--main-color);
+    font-size: clamp(1rem,10vw,2rem);
+}
+.about .container > div .text p , .about .container > div li{
+    color: var(--paragraph);
+    line-height: 1.6;
+}
+.about .container .image{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about .container .image img{
+    width: 80%;
+}
+
+.about .text{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center ;
+    flex-flow: column wrap;
+
+}
+
+
+/* end of about  */
+
+/* start of phrase  */
+.phrase{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2rem;
+    /* margin-bottom: 3rem; */
+    color: var(--main-color);
+}
+
+/* end of phrase  */
+
+
+/* start of team part  */
+
+
+
+
+
+/* end of team part  */
