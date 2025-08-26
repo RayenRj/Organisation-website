@@ -52,7 +52,7 @@
     --blue--95: #e1e5f0;
 
 
-    --main-color :#004654;
+    --main-color : #004654;
     /* --main-color :black; */
     --main-hover-color: #314d5c;
     --second-hover-color : #e1f0ee;
@@ -83,6 +83,10 @@
     }
 }
 
+::placeholder{
+    opacity: 0.8;
+    font-size: 13px;
+}
 
 .header-of-every-part{
     width: 100%;
@@ -162,6 +166,13 @@ ul li a.item::after{
     .header ul li:not(:last-child){
         display: none;
     }
+    .header ul{
+        position: relative;
+    }
+    .header ul li:last-of-type{
+        position: absolute;
+        right: 5%;
+    }
 }
 /* end header  */
 
@@ -183,6 +194,7 @@ ul li a.item::after{
 
 .main .image img{
     width: 100%;
+    object-fit: cover;
 }
 
 .main .information{
@@ -209,6 +221,7 @@ ul li a.item::after{
 
 .main ul{
     list-style: none;
+
 }
 .button{
     margin-top: 4rem;
@@ -231,13 +244,30 @@ ul li a.item::after{
 
 }
 
+@media (max-width: 767px) {
+    .main{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .main > div{
+    height: fit-content;
+    width: 100%;
+    
+    }
+    .main div.information{
+        padding: 70px 20px;
+    }
+
+}
+
+
 
 
 /* end of main  */
 
 /* start of about  */
 .about {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 .about .container{
@@ -283,6 +313,31 @@ ul li a.item::after{
 
 }
 
+@media (max-width:767px) {
+    #about{
+        width: 95%;
+    }
+
+}
+
+@media (max-width:600px){
+    
+    .about .image{
+        display: none;
+    }
+    .about .image img{
+        display: none;
+    }
+    .about .container > div{
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .about .container .text h1{
+        margin-bottom: 0px;
+
+    }
+
+}
 
 /* end of about  */
 
@@ -392,3 +447,246 @@ ul li a.item::after{
 
 
 /* end of timeline part  */
+
+
+/* start of contact us part  */
+.contact-container{
+    margin-top: 150px;
+    width: 100%;
+    height: fit-content;
+
+    padding: 0px 5% 5% 5%;
+    background-image: linear-gradient(90deg , #0e3959 0% , #0e3959 30% , #03a9f5 30% , #03a9f5 100%);
+}
+
+.contact-container .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.contact-container .title h2{
+    color: white;
+    font-weight: 500;
+
+}
+.form {
+    grid-area: form;
+}
+.info{
+    grid-area: info;
+}
+.map{
+    grid-area: map;
+}
+.box{
+    position:relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+        "form info" "form map";
+    gap: 20px;
+    margin-top: 20px;
+}
+.contact{
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+
+}
+.contact h3{
+    color: var(--main-color) ;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+
+/* form  */
+.formBox{
+    position: relative;
+    width: 100%;
+}
+.formBox .row50{
+    display: flex;
+    gap: 20px
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom : 10px;
+    width: 50%;
+}
+.row100 .inputBox{
+    width: 100%;
+}
+ .inputBox span{
+    color: #18b7ff;
+    margin-top: 10px;
+    margin-bottom : 5px ;
+    font-weight: 500;
+}
+
+.inputBox input{
+    padding: 10px;
+    font-size: 1..1em;
+    outline: none;
+}
+
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1..1em;
+    outline: none;
+    resize: none;  
+    border: 1px solid #333;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type='submit']{
+    background-color: #ff578b;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    padding: 14px 15px;
+}
+
+/* info  */
+.info{
+    background-color: var(--main-color);
+}
+
+.info h3{
+    color: #fff;
+}
+.info .infoBox div{
+    display: flex;
+    margin-bottom:10px ;
+}
+
+.info .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #18b7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+.info .infoBox div p{
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.info .infoBox div a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sci{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+
+}
+.sci li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+.sci li a{
+    color: #ccc;
+    font-size: 2em;
+    transition: 0.3s all ease;
+}
+.sci li a {
+    color: white;
+
+}
+
+/* map  */
+
+.map{
+    padding: 0;
+}
+.map iframe{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* responsive design  */
+
+@media (max-width:650px){
+    .contact-container{
+        background-color: #03a9f5;
+        background-image: none;
+        height: fit-content;
+    }
+    .box{
+    position:relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:auto;
+    grid-template-areas: 
+        "form"  "info" "map";
+    gap: 20px;
+    margin-top: 20px;
+}
+.contact.map iframe{
+    width: 100%;
+    height: 400px;
+}
+}
+
+@media (max-width:500px) {
+    .formBox .row50{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .formBox .row50 .inputBox{
+        width: 100%;
+    }
+    .formBox .row50 input{
+        width: 100%;
+    }
+    .inputBox textarea{
+        min-height: 120px;
+    }
+
+}
+
+/* end of contact us part  */
+
+
+/* start of events  */
+
+div.events{
+    height: 100vh;
+    margin-top: 130px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end of events  */
