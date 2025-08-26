@@ -56,7 +56,8 @@
     /* --main-color :black; */
     --main-hover-color: #314d5c;
     --second-hover-color : #e1f0ee;
-    --second-color :  #47a203;
+    --second-color :  rgb(223, 69, 69);
+    scroll-behavior: smooth;
 
 }
 
@@ -80,6 +81,14 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+
+.header-of-every-part{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: var(--components---blob-1\<deleted\|variable-a2a878bd-841d-3cc2-7d01-969285b689f2\>);
 }
 
 
@@ -279,16 +288,93 @@ ul li a.item::after{
 
 /* start of phrase  */
 .phrase{
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -2rem;
     /* margin-bottom: 3rem; */
     color: var(--main-color);
+    font-size: 0.8rem;
+    text-align: center;
+    opacity: 0.5    ;
 }
 
 /* end of phrase  */
 
+
+/* start of subsciption  */
+.card-container{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    color: white;
+    text-align: center;
+    padding-bottom: 2rem;
+}   
+
+.card-subs{
+    background-color: var(--main-color);
+    padding: 10px 20px 40px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-subs .list ul li {
+    width: fit-content;
+    text-align: center;
+    padding-left: 1px;
+    line-height: 1.5;
+    font-size: 15px;
+    text-align: left;
+    
+}
+.card-container .button-subscription{
+    border: 2px solid rgb(223, 69, 69);
+    border-radius: 1rem;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+.card-container .button-subscription:hover{
+    background-color: rgb(223, 69, 69);
+    border-color: rgb(223, 69, 69);
+}
+
+.card-container .list{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.card-container .price{
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+.card-container h2{margin:0;}
+.price h2{
+    font-size: 25px;
+}
+.price h2 sub{
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.price h3{
+    color: var(--second-color);
+}
+
+
+/* end of subscription  */
 
 /* start of team part  */
 
@@ -297,3 +383,12 @@ ul li a.item::after{
 
 
 /* end of team part  */
+
+
+/* start of timeline part  */
+
+
+
+
+
+/* end of timeline part  */
