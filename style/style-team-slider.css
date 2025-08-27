@@ -24,10 +24,12 @@
     border-radius: 25px;
     background-color: #fff;
     width: 320px;
+    margin-right: 2rem;
 
 }
 .slide-content{
-    margin: 0 40px;;
+    margin: 0 40px;
+    
 }
 
 .card-content, .image-content{
@@ -98,4 +100,11 @@
     width: 100%;
     background-color: #aaa;
     padding: 40px 0;;
+}
+
+.card-swapper{
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+
 }
