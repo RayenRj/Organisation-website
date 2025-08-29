@@ -533,7 +533,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: -2rem;
-    /* msargin-bottom: 3rem; */
+    /* margin-bottom: 3rem; */
     color: var(--main-color);
     font-size: 0.8rem;
     text-align: center;
@@ -685,6 +685,26 @@ body{
     }
 
 }
+
+@media (max-width:650px){
+    .card-container{
+    width: 100%;
+    grid-template-columns: 200px;
+    padding: 0px 15vw ;
+
+}    
+}
+
+@media (max-width:900px){
+    .card-container{
+    width: 90%;
+    grid-template-columns: 250px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+}   
+}
+
+
 
 /* end of subscription  */
 
