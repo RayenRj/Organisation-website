@@ -69,7 +69,10 @@
     box-sizing: border-box;
 }
 /* start of general style  */
-
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 .container{
     background-color: white;
     width: 100%;
@@ -170,6 +173,10 @@
     color: var(--main-color);
     text-align: center;
     position: relative;
+    transition: 0.2s all ease;
+}
+.header .list ul li a:hover{
+    color: var(--second-color);
 }
 
 .header button{
@@ -183,13 +190,13 @@
     cursor: pointer;
 }
 
-.header button:hover{
-    background-color: transparent;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
+.header button:hover {
+    background-color: orangered;
+    color: white;
+
 }
 
-ul li a.item::after{
+.header .list ul li a.item::after{
     content: '';
     position: absolute;
     bottom: -1px;
@@ -198,20 +205,75 @@ ul li a.item::after{
     height: 1.5px;
     background-color: var(--main-color);
 }
+.header{
+    position: relative;
+}
+.header ul.hidden{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 115%;
+    justify-content: space-evenly;
+    padding: 10px;
+    list-style: none;
+}
+.header > ul.hidden li a{
+    list-style-type: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    width: fit-content;
+    font-size: 15px;
+}
+.header > ul.hidden li a::before{
+    position: absolute;
+    content: '';
+    bottom: -1px;
+    left: 50%;
+    height: 1.65px;
+    width: 0%;
+    background-color: orangered;
+    transition: 0.4s all ease;
+}
+.header > ul.hidden li a:hover::before{
+    width: 80%;
+    left: 10%;
+    
+}
+.header > ul.hidden li a:hover{
+    color: orangered;
+}
 
 
-@media (max-width:767px){
-    .header ul li:not(:last-child){
+@media (max-width:1200px) {
+    .header .list{
+        width: 85%;
+    }
+}
+
+@media (max-width:700px){
+    .header{
+        height: 30px;
+    }
+    .header .list ul li:not(:last-child){
         display: none;
     }
-    .header ul{
+    .header .list ul{
         position: relative;
     }
-    .header ul li:last-of-type{
+    .header .list ul li:last-of-type{
         position: absolute;
         right: 5%;
     }
+    .header ul.hidden{
+        display: flex;
+    }
+
 }
+
+
+
 /* end header  */
 
 /* start of main  */
@@ -253,9 +315,12 @@ ul li a.item::after{
     font-size: clamp(35px,5vw,3rem);
     color: var(--main-color);
 }
+
+/* ##################"" */
+
 .main .information ul li{
     text-align: left;
-    color: #3f8c93;
+    color: #525252;
 
 }
 
@@ -272,22 +337,36 @@ ul li a.item::after{
     text-decoration: none;
     margin: 0rem 0.2rem;
     font-size : clamp(1.1rem,3vw,1.5rem);
-    border: 2px solid var(--main-color);
+    border: 2.5px solid var(--main-color);
     padding : 0.5rem 2rem;
     border-radius: 2rem;
     color: var(--main-color);
+    font-weight: 600;
 }
 
 .main .information .button a:first-child{
     background-color: var(--main-color);
     color: white;
+}
 
+.main .information .button a:first-child:hover{
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+}
+
+
+.main .information .button a:last-child:hover{
+    background-color: transparent;
+    color: orangered;
+    border-color: orangered;
 }
 
 @media (max-width: 850px) {
     .main{
         flex-direction: column;
         height: fit-content;
+        /* padding-top: 2.9rem; */
     }
     .main > div{
     height: fit-content;
@@ -298,7 +377,18 @@ ul li a.item::after{
         padding: 70px 20px;
     }
 
+
 }
+
+@media(max-width:700px){
+    .main{
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 2.9rem;
+    }
+}
+
+
 
 
 
@@ -355,7 +445,17 @@ ul li a.item::after{
     flex-flow: column wrap;
 
 }
+.about .container > div:nth-child(odd) {
+    animation: motion-about-wide both;
+    animation-timeline: view(50% 0%);
+    animation-range: entry 10% contain 50%;
+}
 
+.about .container > div:nth-child(even) {
+    animation: motion-about-wide2 both;
+    animation-timeline: view(0% 0%);
+    animation-range: entry 30% contain 50%;
+}
 
 
 @media (max-width:700px){
@@ -374,6 +474,11 @@ ul li a.item::after{
         margin-bottom: 0px;
 
     }
+    .about .container > div .text{
+        animation: motion-about-small both;
+        animation-timeline: view(0% 0%);
+        animation-range: entry 0% contain 50%;
+    }
 
 }
 
@@ -385,7 +490,7 @@ ul li a.item::after{
 
 }
 
-@keyframes motion-about {
+@keyframes motion-about-wide {
     from{
         opacity: 0;
         clip-path: inset(0 100% 0 0);
@@ -393,6 +498,28 @@ ul li a.item::after{
     to{
         opacity: 1;
         clip-path: inset(0 0 0 0);
+    }
+}
+@keyframes motion-about-wide2 {
+    from{
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+@keyframes motion-about-small {
+    from{
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0px);
     }
 }
 
@@ -561,13 +688,7 @@ ul li a.item::after{
 
 /* end of subscription  */
 
-/* start of team part  */
 
-
-
-
-
-/* end of team part  */
 
 
 
@@ -978,6 +1099,7 @@ div.events{
     text-align: left;
     transform: translateY(-20px);
     padding-left: calc(5% + 40px);
+    padding-right: 3rem;
 }
 .timeline-part .header-of-every-part{
     text-align: left;
@@ -1074,7 +1196,6 @@ div.events{
 
 .timeline .timeline-blocks .block .header h2{
     font-size: 20px;
-    color: ;
     margin-bottom: 2px;
 }
 
