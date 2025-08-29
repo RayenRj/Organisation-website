@@ -533,7 +533,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: -2rem;
-    /* margin-bottom: 3rem; */
+    /* msargin-bottom: 3rem; */
     color: var(--main-color);
     font-size: 0.8rem;
     text-align: center;
