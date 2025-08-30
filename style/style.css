@@ -272,6 +272,11 @@ body{
 
 }
 
+@media (max-width:550px){
+    .header ul.hidden{
+    display: none;
+    }
+}
 
 
 /* end header  */
@@ -388,6 +393,13 @@ body{
     }
 }
 
+@media(max-width:550px){
+    .main{
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 0.2rem;
+    }
+}
 
 
 
@@ -490,36 +502,15 @@ body{
 
 }
 
-@keyframes motion-about-wide {
-    from{
-        opacity: 0;
-        clip-path: inset(0 100% 0 0);
-    }
-    to{
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    }
-}
-@keyframes motion-about-wide2 {
-    from{
-        opacity: 0;
-        clip-path: inset(0 0 0 100%);
-    }
-    to{
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    }
-}
+
 
 
 @keyframes motion-about-small {
     from{
         opacity: 0.5;
-        filter: blur(10px);
     }
     to{
         opacity: 1;
-        filter: blur(0px);
     }
 }
 
