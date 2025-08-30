@@ -682,6 +682,7 @@ body{
     width: 100%;
     grid-template-columns: 200px;
     padding: 0px 15vw ;
+    padding: 0 5% ;
 
 }    
 }
@@ -691,6 +692,7 @@ body{
     width: 90%;
     grid-template-columns: 250px;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    
 
 }   
 }
@@ -782,7 +784,7 @@ body{
 .row100 .inputBox{
     width: 100%;
 }
- .inputBox span{
+.inputBox span{
     color: #18b7ff;
     margin-top: 10px;
     margin-bottom : 5px ;
@@ -892,6 +894,8 @@ body{
         height: fit-content;
         padding-top: 1em;
         padding-bottom: 3em;
+        padding-left: 2%;
+        padding-right: 2%;
         
     }
     .box{
@@ -908,6 +912,7 @@ body{
     width: 100%;
     height: 400px;
 }
+
 }
 
 @media (max-width:900px) {
@@ -925,8 +930,11 @@ body{
     .inputBox textarea{
         min-height: 120px;
     }
-
+    
 }
+
+
+
 
 /* end of contact us part  */
 
