@@ -886,19 +886,19 @@ body{
 
 
 /* responsive design  */
-@media (max-width:300px){
+@media (max-width:400px){
     .contact-container{
         background-color: #c8eeff;
         background-image: none;
         height: fit-content;
         padding-top: 1em;
         padding-bottom: 3em;
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
         
     }
     .box{
-        margin: 0% 1%;
+        margin: 0;
     }
 }
 @media (max-width:650px){
